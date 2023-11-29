@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>[Template] Sample Inner Page</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+{% load static %}
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+ <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Yummy
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Your Cake Page<span>.</span></h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+           <li><a href="{% url 'hero' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'menu' %}">CakeVariety</a></li>
+          <li><a href="{% url 'chefs' %}">Bakers</a></li>
+          <li><a href="{% url 'gallery' %}">EquipmentVariety</a></li>
+          <li><a href="{% url 'addproduct' %}">Add Cakes$ Items</a></li>
+          <li class="dropdown"><a href="{% url 'dropdown' %}"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="{% url 'dropdown' %}">Drop Down 1</a></li>
+
+            </ul>
+          </li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Cakes Inner Page</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Sample Inner Page</li>
+          </ol>
+        </div>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+ <!-- ======= Menu Section ==== -->
+    <section id="menu" class="menu">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our Cakes</h2>
+          <p>Check Our <span>Cakes Variety</span></p>
+        </div>
+
+        <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+
+          <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
+              <h4>BirthdayCakes</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
+              <h4>AnniversaryCakes</h4>
+            </a><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-lunch">
+              <h4>WeddingCakes</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+        </ul>
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+
+          <div class="tab-pane fade active show" id="menu-starters">
+
+            <div class="tab-header text-center">
+              <p>Our Cakes</p>
+              <h3>Birthday Cakes</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'image/birth1.jpeg' %}" class="glightbox"><img src="{% static 'image/birth1.jpeg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Funfetti Cake</h4>
+
+                <p class="price">
+                    2000Ksh
+
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'image/birth2.jpeg' %}" class="glightbox"><img src="{% static 'image/birth2.jpeg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Cheese Cake</h4>
+
+
+                <p class="price">
+                  1500ksh
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'image/birth3.jpeg' %}" class="glightbox"><img src="{% static 'image/birth3.jpeg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Coffee Cake</h4>
+
+
+                <p class="price">
+                  1800ksh
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'image/birth4.jpeg' %}" class="glightbox"><img src="{% static 'image/birth4.jpeg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Pineapple Cake</h4>
+
+                <p class="price">
+                  2500ksh
+                </p>
+              </div><!-- Menu Item -->
+
+
+            </div>
+          </div><!-- End Starter Menu Content -->
+
+          <div class="tab-pane fade" id="menu-breakfast">
+
+            <div class="tab-header text-center">
+              <p>Our Cakes</p>
+              <h3>Anniversary Cakes</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'image/anni1.jpeg' %}" class="glightbox"><img src="{% static 'image/anni1.jpeg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Vanilla Cake</h4>
+
+                <p class="price">
+                  3500ksh
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'image/anni2.jpeg' %}" class="glightbox"><img src="{% static 'image/anni2.jpeg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Banana Cake</h4>
+
+                <p class="price">
+                  3200ksh
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'image/anni3.jpeg' %}" class="glightbox"><img src="{% static 'image/anni3.jpeg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Chocolate Cake</h4>
+
+                <p class="price">
+                  3800ksh
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'image/anni4.jpeg' %}" class="glightbox"><img src="{% static 'image/anni4.jpeg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Red Velvet Cake</h4>
+
+                <p class="price">
+                  4000ksh
+                </p>
+              </div><!-- Menu Item -->
+
+
+            </div>
+          </div><!-- End Breakfast Menu Content -->
+
+          <div class="tab-pane fade" id="menu-lunch">
+
+            <div class="tab-header text-center">
+              <p>Our Cakes</p>
+              <h3>Wedding Cakes</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'image/wedding3.jpeg' %}" class="glightbox"><img src="{% static 'image/wedding3.jpeg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Black Forest Cake</h4>
+
+                <p class="price">
+                  30,000 ksh
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'image/wedding4.jpeg' %}" class="glightbox"><img src="{% static 'image/wedding4.jpeg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Red Velvet Cake</h4>
+
+                <p class="price">
+                  24,000 Ksh
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'image/WEDO1.jpeg' %}" class="glightbox"><img src="{% static 'image/WEDO1.jpeg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Vanilla Cake</h4>
+
+                <p class="price">
+                  20,000 ksh
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'image/WEDO2.jpeg' %}" class="glightbox"><img src="{% static 'image/WEDO2.jpeg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>White Forest Cake</h4>
+
+                <p class="price">
+                  28,000 ksh
+                </p>
+              </div><!-- Menu Item -->
+
+
+            </div>
+          </div><!-- End Lunch Menu Content -->
+
+
+        </div>
+
+      </div>
+    </section><!-- End Menu Section -->
+
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div>
+            <h4>Address</h4>
+            <p>
+              Ongata Rongai<br>
+              Kenya<br>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Reach Us</h4>
+            <p>
+              <strong>Phone:</strong> +254 111545201<br>
+              <strong>Email:</strong> shalommbuthia@gmail.com<br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>
+              <strong>Mon-Sat: 9.00am</strong> - 11pm<br>
+              Sunday: Closed
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Your Cake Page</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">Shalom Mbuthia</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
